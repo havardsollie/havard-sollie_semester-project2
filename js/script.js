@@ -1,6 +1,6 @@
 import { displayAll } from "./data/displayAll.js";
 import { displayFeatured } from "./data/displayFeatured.js";
-import { displayDetails } from "./data/displayDetailedProduct.js";
+import { displayDetails, addToList } from "./data/displayDetailedProduct.js";
 import { searchInData } from "./utils/search.js";
 // import { displayMessage } from "./utilities/displayMessage.js";
 import { url } from "./utils/api.js";
@@ -44,10 +44,10 @@ async function showDetailedProduct() {
     const data = await response.json();
 
     displayDetails(data);
+    addToList(data);
 
   } catch (error) {
     // displayMessage("Error. Not recieving data", error)
   }  
 }
 showDetailedProduct();
-
