@@ -1,7 +1,6 @@
 import { displayAll } from "./data/displayAll.js";
 import { displayFeatured } from "./data/displayFeatured.js";
 import { displayDetails } from "./data/displayDetailedProduct.js";
-// import { getExistingFavorites } from "./utilities/getExistingFavorites.js";
 import { searchInData } from "./utils/search.js";
 // import { displayMessage } from "./utilities/displayMessage.js";
 import { url } from "./utils/api.js";
@@ -51,3 +50,4 @@ async function showDetailedProduct() {
   }  
 }
 showDetailedProduct();
+

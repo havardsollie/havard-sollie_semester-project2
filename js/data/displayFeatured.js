@@ -1,5 +1,3 @@
-
-
 export function displayFeatured (featuredData) {
   const container = document.querySelector(".featured");
 
