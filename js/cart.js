@@ -12,7 +12,7 @@ cart.forEach((product) => {
   container.innerHTML += `<div class="item">
                             <p>${product.title}</p>
                             <p>${product.price}</p>
-                            <img src="${product.image}">
+                            <img src="${product.image}" width="200px" height="150px">
                             <a href="details.html?id=${product.id}">
                             <p>Go to page</p></a>
                             </div>`

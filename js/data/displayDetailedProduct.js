@@ -29,13 +29,17 @@ export function displayDetails (product) {
     <p>${product.description}</p>
     <p>${product.price}</p>
     <img src="http://localhost:1337${product.image.url}" width="400px" height="300px" alt="${product.image.alternativeText}">
-    <i class="${cssClass} fa-heart" data-id="${product.id}"></i>
+    <i class="${cssClass} fa-heart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}"></i>
     </div>`
 
     const iconToClick = document.querySelectorAll(".detailedData i");
 
     iconToClick.forEach((icon) => {
-        icon.addEventListener("click", addToList);
+        icon.addEventListener("click", addToList, function (){
+          this.id = product.id;
+          cart.push(product);
+          saveCart();
+        });
     });
 }
 
@@ -46,7 +50,7 @@ export function addToList() {
   const id = this.dataset.id;
   const title = this.dataset["title"];
   const price = this.dataset["price"];
-  const image = this.dataset["http://localhost:1337${product.image.url}"];
+  const image = this.dataset["image"];
 
   const cart = getCart();
 
