@@ -1,12 +1,19 @@
-// import getCart from "./utils/getCart.js";
+import getCart from "./utils/getCart.js";
 
-// const cart = getCart();
+const cart = getCart();
 
-// const container = document.querySelector(".product-container");
+const container = document.querySelector(".product-container");
 
-// cart.forEach((item) => {
-//   container.innerHTML += `<div class="item">
-//                             <p>${item.title}</p>
-//                             ${item.id}
-//                             </div>`
-// });
+if(cart.length === 0) {
+  container.innerHTML = "There are no favorites";
+}
+
+cart.forEach((product) => {
+  container.innerHTML += `<div class="item">
+                            <p>${product.title}</p>
+                            <p>${product.price}</p>
+                            <img src="${product.image}">
+                            <a href="details.html?id=${product.id}">
+                            <p>Go to page</p></a>
+                            </div>`
+});

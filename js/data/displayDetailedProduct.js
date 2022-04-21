@@ -44,6 +44,9 @@ export function addToList() {
   this.classList.toggle("far");
 
   const id = this.dataset.id;
+  const title = this.dataset["title"];
+  const price = this.dataset["price"];
+  const image = this.dataset["http://localhost:1337${product.image.url}"];
 
   const cart = getCart();
 
@@ -52,7 +55,7 @@ export function addToList() {
   });
   
   if (cartItem === undefined) {
-    const newItem = { id: id};
+    const newItem = { id: id, title: title, price: price, image: image };
     cart.push(newItem);
     saveCart(cart);
   }
