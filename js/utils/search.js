@@ -7,7 +7,7 @@ export function searchInData (data) {
     const searchValue = event.target.value.trim().toLowerCase();
   
     const filterTitles = data.filter(function(product) {
-      if(product.title.toLowerCase().startsWith(searchValue)) {
+      if(product.title.toLowerCase().includes(searchValue)) {
         return true;
       }
     });

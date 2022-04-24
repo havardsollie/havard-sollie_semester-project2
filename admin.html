@@ -12,26 +12,28 @@
       <header>
         <div class="container">
             <div class="menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="products.html">Products</a>
-                <a href="cart.html">Checkout</a>
-                <a href="admin.html">admins</a>
+                <a href="index.html">Home</a>
             </div>
         </div>
       </header>
      <main>
-       <div class="hero-banner">
-         <div>
-           <h1>This is our products</h1>
-        </div>
-        </div>
+      <h1>Admin users</h1>
 
-        <div class="featured">
-          <h3>featured</h3>
-        </div>
+      <form>
+          <div>
+              <label for="username"> Username:</label>
+              <input id="username" />
+          </div>
+          <div>
+              <label for="password"> Password:</label>
+              <input id="password" />
+          </div>
+          <button>Submit</button>
+          <div class="message-container"></div>
+      </form>
            
      </main> 
 
-        <script src="js/script.js" type="module"></script>
+        <script src="js/login.js" type="module"></script>
     </body>
 </html>
