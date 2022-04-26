@@ -48,7 +48,7 @@ async function doLogin(username, password) {
             saveTokenKey(json.jwt);
             saveThisUser(json.user);
 
-            location.href = "edit.html"
+            location.href = "productsforadmin.html";
         }
 
         if (json.error) {

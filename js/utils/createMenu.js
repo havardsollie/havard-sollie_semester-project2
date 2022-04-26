@@ -7,11 +7,11 @@ export default function menu() {
   let authorizationLink = `<a href="admin.html" class="${path === "/admin.html" ? "active" : ""}">Login</a>`;
 
   if (username) {
-    authorizationLink = `<span>Hi ${username}</span>`;
+    authorizationLink = `<a href="add.html" class="${path === "/add.html" ? "active" : ""}">Add product</a><span>Hi ${username}</span>`;
   }
 
   container.innerHTML = `<div class="menu-items>
-                              <a href="edit.html" class="${path === "/edit.html" ? "active" : ""}">Add</a>
+                              <a href="productsforadmin.html" class="${path === "/productsforadmin.html" || path === "/productsforadmin.html" ? "active" : ""}">Home</a>
                               ${authorizationLink}
                           </div>`;
 }
