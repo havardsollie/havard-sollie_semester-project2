@@ -25,12 +25,31 @@
         <button id="logout" type="button">Log out</button>
       </div>
 
-        <div class="featured">
-          <h3>featured</h3>
+      <form>
+        <div class="add-container"></div>
+
+        <div>
+          <label for="title">Title</label>
+          <input id="title" />
         </div>
+        <div>
+          <label for="price">Price</label>
+          <input id="price" />
+        </div>
+        <div>
+          <label for="image">Image URL</label>
+          <textarea id="image"></textarea>
+        </div>
+        <div>
+          <label for="featured">Featured product?</label>
+          <input type="checkbox" id="yes" value="yes" onclick="false">Yes</input>
+        </div>
+        <button>Add product</button>
+      </form>
            
      </main> 
 
         <script src="js/logout.js" type="module"></script>
+        <script src="js/add.js" type="module"></script>
     </body>
 </html>

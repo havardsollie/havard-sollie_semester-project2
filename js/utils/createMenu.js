@@ -11,7 +11,7 @@ export default function menu() {
   }
 
   container.innerHTML = `<div class="menu-items>
-                              <a href="/" class="${path === "/" ? "active" : ""}">Back</a>
+                              <a href="edit.html" class="${path === "/edit.html" ? "active" : ""}">Add</a>
                               ${authorizationLink}
                           </div>`;
 }
