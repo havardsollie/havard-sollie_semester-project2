@@ -1,10 +1,13 @@
 import { displayAll } from "./data/displayAll.js";
 import { displayFeatured } from "./data/displayFeatured.js";
 import { displayDetails } from "./data/displayDetailedProduct.js";
+import menu from "./utils/createMenu.js";
 import { searchInData } from "./utils/search.js";
 // import { displayMessage } from "./utilities/displayMessage.js";
 import { url } from "./utils/api.js";
 import { productUrl } from "./data/displayDetailedProduct.js";
+
+menu();
 
 async function showFeatured() {
 
