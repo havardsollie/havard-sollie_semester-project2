@@ -14,7 +14,7 @@ const totalPrice = document.querySelector(".total");
 let total = 0;
 
 cart.forEach((product) => {
-  total += product.price;
+  total += parseFloat(product.price);
   container.innerHTML += `<div class="item">
                             <p>${product.title}</p>
                             <p>${product.price}</p>

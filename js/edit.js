@@ -32,7 +32,7 @@ const message = document.querySelector(".add-container");
 
     title.value = details.title;
     price.value = details.price;
-    image.value = details.image;
+    image.value = `http://localhost:1337"${details.image.url}`;
     idInput.value = details.id;
   } catch (error) {
     console.log(error);
