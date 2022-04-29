@@ -13,7 +13,6 @@ export function searchInData (data) {
     });
   
     displayAll(filterTitles);
-    // getExistingFavorites();
   };
 
 }

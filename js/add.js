@@ -12,11 +12,7 @@ const price = document.querySelector("#price");
 const message = document.querySelector(".add-container");
 
 const image = document.getElementById("image");
-image.addEventListener("change", handleChange);
 
-function handleChange () {
-  const imageFile = this.files;
-}
 
 form.addEventListener("submit", submitForm);
 
@@ -27,7 +23,7 @@ function submitForm(event) {
 
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
-  const imageValue = handleChange();
+  const imageValue = image.files;
   const trueValue = checkFeatured();
 
   // if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
@@ -44,13 +40,13 @@ async function addProduct(title, price, image, trueValue) {
 
   const data = JSON.stringify({ title, price, featured: trueValue });
 
-  formData.append("files", image);
+  formData.append("files.image", image[0]);
   formData.append("data", data);
-  console.log("data", data);
+  console.log("data", data, formData);
 
   const options = {
     method: "POST",
-    body: formData, data,
+    body: formData,
     headers: {
       Authorization: `Bearer ${token}`,
     },

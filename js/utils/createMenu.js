@@ -13,7 +13,7 @@ export default function menu() {
   }
 
   container.innerHTML = `<div class="menu-items>
-                              <a href="/" class="${path === "/" || path === "/productsforadmin.html" ? "active" : ""}">Home</a>
+                              <a href="/" class="${path === "/index.html" ? "active" : ""}">Home</a>
                               <a href="products.html" class="${path === "/products.html" ? "active" : ""}">Products</a>
                               <a href="cart.html" class="${path === "/cart.html" ? "active" : ""}">Cart</a>
                               ${authorizationLink}

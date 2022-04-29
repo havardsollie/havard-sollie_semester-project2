@@ -8,7 +8,7 @@ function logOut() {
   function logMeOut() {
     localStorage.removeItem(userKey, tokenKey);
 
-    location.href = "admin.html";
+    location.href = "index.html";
   }
 }
 logOut();

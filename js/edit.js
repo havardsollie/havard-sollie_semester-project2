@@ -5,6 +5,7 @@ import menu from "./utils/createMenu.js";
 import { searchInData } from "./utils/search.js";
 import { fetchToken } from "./utils/storage.js";
 import checkFeatured from "./utils/featuredCheck.js";
+import deleteProduct from "./utils/deleteProduct.js";
 
 
 menu();
@@ -32,8 +33,17 @@ const message = document.querySelector(".add-container");
 
     title.value = details.title;
     price.value = details.price;
-    image.value = `http://localhost:1337"${details.image.url}`;
     idInput.value = details.id;
+
+    // if (data.featured)
+    // container.innerHTML = ` <label for="featured">The product is already featured. Undo it?</label>
+    //                         <input type="checkbox" id="yes" value="yes" onclick="false">Yes</input>`;
+    // if (checkbox.checked) {
+    //   return false;
+    // }
+
+    deleteProduct(details.id);
+
   } catch (error) {
     console.log(error);
   };
@@ -48,26 +58,31 @@ function submitForm(event) {
 
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
-  const imageValue = image.value.trim();
-  const trueValue = checkFeatured();
+  const imageValue = image.files;
+  const featuredValue = checkFeatured();
 
   // if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
   //   return displayMessage("Please supply proper input", ".add-container");
   // }
 
-  updateProduct(titleValue, priceValue, imageValue, trueValue);
+  updateProduct(titleValue, priceValue, imageValue, featuredValue);
   console.log(submitForm)
 }
 
-async function updateProduct(title, price, image, trueValue, id) {
-  const data = JSON.stringify({ title: title, price: price, image: image, featured: trueValue });
+async function updateProduct(title, price, image, featuredValue) {
   const token = fetchToken();
+  const formData = new FormData();
+
+  const data = JSON.stringify({ title, price, featured: featuredValue });
+
+  formData.append("files.image", image[0]);
+  formData.append("data", data);
+  console.log("data", data, formData);
 
   const options = {
     method: "PUT",
-    body: data,
+    body: formData,
     headers: {
-      "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
   };
