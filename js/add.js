@@ -1,4 +1,4 @@
-// import displayMessage from "./utils/displayMessage.js";
+import displayMessage from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
 import { fetchToken } from "./utils/storage.js";
 import { url } from "./utils/api.js";
@@ -26,9 +26,9 @@ function submitForm(event) {
   const imageValue = image.files;
   const trueValue = checkFeatured();
 
-  // if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
-  //   return displayMessage("Please supply proper input", ".add-container");
-  // }
+  if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
+    return displayMessage("Please supply proper input", ".add-container");
+  }
 
   addProduct(titleValue, priceValue, imageValue, trueValue);
 }
@@ -57,16 +57,16 @@ async function addProduct(title, price, image, trueValue) {
     const json = await response.json();
 
     if (json.created_at) {
-      // displayMessage("Product created", ".add-container");
+      displayMessage("Product created", ".add-container");
       form.reset();
     }
 
-    // if (json.error) {
-    //   displayMessage(json.message, ".add-container");
-    // }
+    if (json.error) {
+      displayMessage(json.message, ".add-container");
+    }
     console.log(json);
   } catch (error) {
     console.log(error);
-    // displayMessage("An error occured", ".add-container");
+    displayMessage("An error occured", ".add-container");
   }
 }

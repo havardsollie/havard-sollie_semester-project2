@@ -1,6 +1,6 @@
 import { displayDetails } from "./data/displayDetailedProduct.js";
 import { url } from "./utils/api.js";
-// import displayMessage from "./utils/displayMessage.js";
+import displayMessage from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
 import { searchInData } from "./utils/search.js";
 import { fetchToken } from "./utils/storage.js";
@@ -35,13 +35,6 @@ const message = document.querySelector(".add-container");
     price.value = details.price;
     idInput.value = details.id;
 
-    // if (data.featured)
-    // container.innerHTML = ` <label for="featured">The product is already featured. Undo it?</label>
-    //                         <input type="checkbox" id="yes" value="yes" onclick="false">Yes</input>`;
-    // if (checkbox.checked) {
-    //   return false;
-    // }
-
     deleteProduct(details.id);
 
   } catch (error) {
@@ -61,9 +54,9 @@ function submitForm(event) {
   const imageValue = image.files;
   const featuredValue = checkFeatured();
 
-  // if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
-  //   return displayMessage("Please supply proper input", ".add-container");
-  // }
+  if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
+    return displayMessage("Please supply proper input", ".add-container");
+  }
 
   updateProduct(titleValue, priceValue, imageValue, featuredValue);
   console.log(submitForm)
@@ -95,16 +88,16 @@ async function updateProduct(title, price, image, featuredValue) {
     searchInData(data);
 
     if (json.updated_at) {
-      // displayMessage("Product created", ".add-container");
+      displayMessage("Product created", ".add-container");
       form.reset();
     }
 
-    // if (json.error) {
-    //   displayMessage(json.message, ".add-container");
-    // }
+    if (json.error) {
+      displayMessage(json.message, ".add-container");
+    }
     console.log(json);
   } catch (error) {
     console.log(error);
-    // displayMessage("An error occured", ".add-container");
+    displayMessage("An error occured", ".add-container");
   }
 }

@@ -1,4 +1,4 @@
-import displayMessage from "./utils/displayMessage.js";
+import { displayMessage } from "./utils/displayMessage.js";
 import { saveTokenKey, saveThisUser } from "./utils/storage.js";
 import menu from "./utils/createMenu.js";
 
