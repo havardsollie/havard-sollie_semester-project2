@@ -6,8 +6,9 @@ export function displayFeatured (featuredData) {
   featuredData.forEach(function (product) {
     if (product.featured)
     container.innerHTML += `<div class="featuredData">
-                            <h2>${product.title}</h2>
-                            <p>${product.price}</p>
+                            <img src="http://localhost:1337${product.image.url}" alt="${product.image.alternativeText}">
+                            <h3>${product.title}</h3>
+                            <p>ONLY $${product.price}</p>
                             </div>`
   })
 }

@@ -1,0 +1,26 @@
+$font-nav: "Bangers";
+$font-headers: 'Faster One';
+$font-second-header: 'Geo', sans-serif;
+$font-p: 'Source Sans Pro', sans-serif;
+
+a {
+  font-family: $font-nav;
+}
+
+p {
+  font-family: $font-p;
+}
+
+h1 {
+  text-align: center;
+  font-family: $font-p;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: $font-headers;
+}
+
+h3 {
+  font-family: $font-second-header;
+}
