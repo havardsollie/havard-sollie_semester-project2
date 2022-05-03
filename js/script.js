@@ -4,8 +4,13 @@ import { displayDetails } from "./data/displayDetailedProduct.js";
 import menu from "./utils/createMenu.js";
 import { searchInData } from "./utils/search.js";
 import { url } from "./utils/api.js";
-import { productUrl } from "./data/displayDetailedProduct.js";
+// import { productUrl } from "./data/displayDetailedProduct.js";
 import { displayMessage } from "./utils/displayMessage.js";
+
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
+const productUrl = url + id;
 
 menu();
 
@@ -19,10 +24,11 @@ async function showFeatured() {
     displayFeatured(data);
 
   } catch (error) {
-    displayMessage("Error. Not recieving data", error)
+    displayMessage("warning", "Error. I dont know", ".message-container")
   }  
 }
 showFeatured();
+
 
 async function showAll() {
 
@@ -34,7 +40,7 @@ async function showAll() {
     searchInData(data);
 
   } catch (error) {
-    displayMessage("Error. Not recieving data", error)
+    displayMessage("warning", "Cant find something", ".message-container")
   }  
 }
 showAll();
@@ -49,7 +55,7 @@ async function showDetailedProduct() {
     addToList(data);
 
   } catch (error) {
-    displayMessage("Error. Not recieving data", error)
+    displayMessage("warning", "Something is wrong", ".message-container")
   }  
 }
 showDetailedProduct();

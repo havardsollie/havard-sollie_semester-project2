@@ -1,11 +1,6 @@
-import { url } from "../utils/api.js";
+
 import getCart from "../utils/getCart.js";
 import saveCart from "../utils/saveCart.js";
-
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
-export const productUrl = url + id;
 
 const cart = getCart();
 

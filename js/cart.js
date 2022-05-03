@@ -2,7 +2,7 @@ import getCart from "./utils/getCart.js";
 
 const cart = getCart();
 
-const container = document.querySelector(".product-container");
+const container = document.querySelector(".cart-container");
 
 if(cart.length === 0) {
   container.innerHTML = `<div class="error">

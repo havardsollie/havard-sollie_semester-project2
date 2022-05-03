@@ -12,6 +12,7 @@ header {
     right: 0px;
     width: 100px;
     background: var(--main-light-blue); 
+    z-index: 9999;
   }
 
   .nav-container {
@@ -80,6 +81,10 @@ i {
   
     nav {
       font-size: 25px;
+    }
+
+    img {
+      height: 120px;
     }
   }
 }

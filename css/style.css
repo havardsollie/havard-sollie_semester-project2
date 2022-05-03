@@ -20,6 +20,7 @@ header nav {
   right: 0px;
   width: 100px;
   background: var(--main-light-blue);
+  z-index: 9999;
 }
 
 header .nav-container {
@@ -84,6 +85,9 @@ i {
 @media (min-width: 1200px) {
   header nav {
     font-size: 25px;
+  }
+  header img {
+    height: 120px;
   }
 }
 
@@ -272,6 +276,10 @@ body {
   text-align: end;
 }
 
+.detailedData .inner-details i:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 700px) {
   .detailedData {
     background-color: var(--secondary-red);
@@ -394,8 +402,11 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 50px;
+  text-align: end;
+  padding-right: 10px;
   font-family: "Faster One";
+  position: relative;
 }
 
 h3 {
@@ -412,6 +423,11 @@ input {
   border: 2px solid var(--main-dark-blue);
   height: 1.5rem;
   margin-bottom: 20px;
+}
+
+.search-container {
+  max-width: 200px;
+  padding: 50px;
 }
 
 .search::-webkit-input-placeholder {

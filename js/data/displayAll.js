@@ -1,3 +1,5 @@
+
+
 export function displayAll (allData) {
   const container = document.querySelector(".products");
 

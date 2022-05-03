@@ -1,6 +1,6 @@
 import { displayDetails } from "./data/displayDetailedProduct.js";
 import { url } from "./utils/api.js";
-import {displayMessage } from "./utils/displayMessage.js";
+import { displayMessage } from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
 import { searchInData } from "./utils/search.js";
 import { fetchToken } from "./utils/storage.js";
@@ -24,7 +24,7 @@ const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const image = document.querySelector("#image");
 const idInput = document.querySelector("#id");
-const message = document.querySelector(".add-container");
+const message = document.querySelector(".message-container");
 
 (async function () {
   try {
@@ -54,8 +54,8 @@ function submitForm(event) {
   const imageValue = image.files;
   const featuredValue = checkFeatured();
 
-  if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
-    return displayMessage("Please supply proper input", ".add-container");
+  if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) ) {
+    return displayMessage("warning", "Please supply proper input", ".message-container");
   }
 
   updateProduct(titleValue, priceValue, imageValue, featuredValue);
@@ -88,16 +88,12 @@ async function updateProduct(title, price, image, featuredValue) {
     searchInData(data);
 
     if (json.updated_at) {
-      displayMessage("Product created", ".add-container");
+      displayMessage("success", "Product updated", ".message-container");
       form.reset();
     }
 
-    if (json.error) {
-      displayMessage(json.message, ".add-container");
-    }
-    console.log(json);
   } catch (error) {
     console.log(error);
-    displayMessage("An error occured", ".add-container");
+    displayMessage("warning", "An error occured", ".message-container");
   }
 }
