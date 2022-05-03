@@ -1,5 +1,7 @@
 import { fetchToken } from "./storage.js";
-import { url } from "./api.js";
+import { api } from "./api.js";
+
+const url = api + "products/"
 
 export default function deleteProduct(id) {
   const container = document.querySelector(".delete");

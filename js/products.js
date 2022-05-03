@@ -1,11 +1,12 @@
-import { displayAllAdmin } from "./data/displayAllAdmin.js";
+import { displayAll } from "./data/displayAll.js";
+import { searchInData } from "./utils/search.js";
 import { api } from "./utils/api.js";
 import { displayMessage } from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
 
-const url = api + "products/"
-
 menu();
+
+const url = api + "products/";
 
 async function showAll() {
 
@@ -13,10 +14,11 @@ async function showAll() {
     const response = await fetch(url);
     const data = await response.json();
 
-    displayAllAdmin(data);
+    displayAll(data);
+    searchInData(data);
 
   } catch (error) {
-    displayMessage("warning", "Error. Not recieving data", ".message-container");
+    displayMessage("warning", "Cant find something", ".message-container")
     console.log(error);
   }  
 }

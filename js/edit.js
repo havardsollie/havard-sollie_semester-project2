@@ -1,11 +1,12 @@
-import { displayDetails } from "./data/displayDetailedProduct.js";
-import { url } from "./utils/api.js";
+
+import { api } from "./utils/api.js";
 import { displayMessage } from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
-import { searchInData } from "./utils/search.js";
 import { fetchToken } from "./utils/storage.js";
 import checkFeatured from "./utils/featuredCheck.js";
 import deleteProduct from "./utils/deleteProduct.js";
+
+const url = api + "products/";
 
 
 menu();
@@ -83,9 +84,6 @@ async function updateProduct(title, price, image, featuredValue) {
   try {
     const response = await fetch(productUrl, options);
     const json = await response.json();
-
-    displayDetails(data);
-    searchInData(data);
 
     if (json.updated_at) {
       displayMessage("success", "Product updated", ".message-container");

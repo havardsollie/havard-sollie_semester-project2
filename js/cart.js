@@ -1,4 +1,7 @@
 import getCart from "./utils/getCart.js";
+import menu from "./utils/createMenu.js";
+
+menu();
 
 const cart = getCart();
 

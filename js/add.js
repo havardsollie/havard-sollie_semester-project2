@@ -1,15 +1,17 @@
 import { displayMessage } from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
 import { fetchToken } from "./utils/storage.js";
-import { url } from "./utils/api.js";
+import { api } from "./utils/api.js";
 import checkFeatured from "./utils/featuredCheck.js";
+
+const url = api + "products/";
 
 menu();
 
 const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
-const message = document.querySelector(".add-container");
+const message = document.querySelector(".message-container");
 
 const image = document.getElementById("image");
 
@@ -57,16 +59,16 @@ async function addProduct(title, price, image, trueValue) {
     const json = await response.json();
 
     if (json.created_at) {
-      displayMessage("Product created", ".edit-container");
+      displayMessage("success", "Product created", ".message-container");
       form.reset();
     }
 
     if (json.error) {
-      displayMessage(json.message, ".edit-container");
+      displayMessage("warning", json.message, ".message-container");
     }
     console.log(json);
   } catch (error) {
     console.log(error);
-    displayMessage("An error occured", ".edit-container");
+    displayMessage("warning", "An error occured", ".message-container");
   }
 }

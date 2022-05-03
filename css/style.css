@@ -468,7 +468,11 @@ button:hover {
 }
 
 .message.success {
+  margin-top: 20px;
+  font-size: 25px;
   color: green;
+  border: 1px solid green;
+  padding: 10px;
 }
 
 .message.warning {

@@ -2,10 +2,11 @@
 import getCart from "../utils/getCart.js";
 import saveCart from "../utils/saveCart.js";
 
+const container = document.querySelector(".product-container");
+
 const cart = getCart();
 
 export function displayDetails (product) {
-  const container = document.querySelector(".product-container");
 
   container.innerHTML = "";
   
