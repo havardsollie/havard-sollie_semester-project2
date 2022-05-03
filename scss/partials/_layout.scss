@@ -11,7 +11,7 @@ body {
   height: 700px;
 }
 
-.featured-header {
+.header {
   text-align: center;
   background-color: #e5e5f7;
   opacity: 0.9;
@@ -55,6 +55,119 @@ body {
   height: 300px;
 }
 
+.products {
+  background-color: var(--secondary-red);
+  opacity: 0.9;
+  background-image: radial-gradient(var(--main-light-blue) 1.2000000000000002px, #FFFFFF 1.2000000000000002px);
+  background-size: 28px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.allData {
+  margin: 0 auto;
+  padding: 20px;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grey;
+  
+  a {
+    text-decoration: none;
+    
+  }
+
+  h3 {
+    font-size: 80px;
+    color: var(--secondary-red);
+    text-align: center;
+    height: 30px;
+    margin-top: -20px;
+  }
+
+  p {
+    color: var(--secondary-red);
+    font-size: 40px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  img {
+    margin-top: -50px;
+    border-radius: 50px 0 50px 0;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grey;
+  }
+}
+
+.allData:hover {
+    border-radius: 50px 0 50px 0;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: none;
+    
+    img:hover {
+      margin-top: -50px;
+      border-radius: 50px 0 50px 0;
+      border: 0 0 0 5px solid var(--secondary-red);
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      filter: none;
+      border-bottom: 0.5px solid var(--secondary-red);
+      border-left: 0.5px solid var(--secondary-red);
+    }
+}
+
+.detailedData {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    background-attachment: fixed;
+  }
+
+  p {
+    width: 500px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .inner-details {
+
+    h3 {
+      text-align: center;
+      font-size: 80px;
+      color: var(--secondary-red);
+      margin-top: -80px;
+    }
+
+    h4 {
+      text-align: center;
+      font-size: 30px;
+      color: var(--secondary-red);
+      margin-top: -80px;
+    }
+
+    i {
+      margin-top: -50px;
+      font-size: 2rem;
+      text-align: end;
+    }
+  }
+}
+
 // @media (min-width: 700px) {
 //   .featured {
 //     display: grid;
@@ -64,3 +177,92 @@ body {
 //     grid-row-gap: 0px;
 //   }
 // }
+
+@media (min-width: 700px) {
+  .detailedData {
+    background-color: var(--secondary-red);
+    opacity: 0.9;
+    background-image: radial-gradient(var(--main-light-blue) 1.2000000000000002px, #FFFFFF 1.2000000000000002px);
+    background-size: 28px 28px;
+  
+  .inner-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 30px;
+
+    h3, h4, i {
+      font-size: 4rem;
+    }
+  }
+}
+}
+
+@media (min-width: 1000px) {
+  .detailedData {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .detailed-img {
+      margin-top: 30px;
+      width: 400px;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    p {
+      width: 600px;
+      margin: 0 left;
+      font-size: 25px;
+    }
+  
+    .inner-details {
+      width: auto;
+      max-height: 300px;
+      text-align: center;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 50px;
+
+      h3, h4 {
+        margin-top: -30px;
+      }
+    }
+  }
+}
+
+.item {
+  display: flex;
+  padding: 50px;
+
+  img {
+    border-radius: 50px 50px 50px 50px;
+  }
+
+  .inner-item {
+    padding-left: 50px;
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: #bebebe;
+  width: 30%;
+
+  p, h4 {
+    font-size: 25px;
+  }
+
+  p {
+    color: var(--secondary-red);
+  }
+
+  h4 {
+    color: var(--main-dark-blue);
+  }
+}

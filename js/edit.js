@@ -1,6 +1,6 @@
 import { displayDetails } from "./data/displayDetailedProduct.js";
 import { url } from "./utils/api.js";
-import displayMessage from "./utils/displayMessage.js";
+import {displayMessage } from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
 import { searchInData } from "./utils/search.js";
 import { fetchToken } from "./utils/storage.js";

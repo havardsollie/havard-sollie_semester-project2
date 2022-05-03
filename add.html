@@ -4,6 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Semester Project 2</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Faster+One&family=Geo&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b45eaaa2e7.js" crossorigin="anonymous"></script>
         <link href="css/style.css" rel="stylesheet" />
         <link rel="icon" href="data:;base64,=" />
@@ -16,13 +19,9 @@
         <div class="menu-container"></div>
       </header>
      <main>
-      <div class="logout">
-        <h3>log out</h3>
-        <button id="logout" type="button">Log out</button>
-      </div>
 
+      <div class="edit-container">
       <form>
-        <div class="add-container"></div>
 
         <div>
           <label for="title">Title</label>
@@ -36,16 +35,16 @@
           <label for="image">Image Upload</label>
           <input type="file" input id="image" accept="image/*" />
         </div>
-        <div>
+        <div class="check-featured">
           <label for="featured">Featured product?</label>
           <input type="checkbox" id="yes" value="yes" onclick="false">Yes</input>
         </div>
         <button>Add product</button>
       </form>
+      </div>
            
      </main> 
 
-        <script src="js/logout.js" type="module"></script>
         <script src="js/add.js" type="module"></script>
     </body>
 </html>

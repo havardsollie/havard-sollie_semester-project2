@@ -1,4 +1,4 @@
-import displayMessage from "./utils/displayMessage.js";
+import { displayMessage } from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
 import { fetchToken } from "./utils/storage.js";
 import { url } from "./utils/api.js";
@@ -57,16 +57,16 @@ async function addProduct(title, price, image, trueValue) {
     const json = await response.json();
 
     if (json.created_at) {
-      displayMessage("Product created", ".add-container");
+      displayMessage("Product created", ".edit-container");
       form.reset();
     }
 
     if (json.error) {
-      displayMessage(json.message, ".add-container");
+      displayMessage(json.message, ".edit-container");
     }
     console.log(json);
   } catch (error) {
     console.log(error);
-    displayMessage("An error occured", ".add-container");
+    displayMessage("An error occured", ".edit-container");
   }
 }

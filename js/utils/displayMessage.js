@@ -1,4 +1,6 @@
-export function displayMessage(messageType, message = "An error occurred") {
+export function displayMessage(messageType, message, target) {
 
-  return `<div class="message ${messageType}">${message}</div>`;
+  const element = document.querySelector(target)
+
+  element.innerHTML = `<div class="message ${messageType}">${message}</div>`;
 }

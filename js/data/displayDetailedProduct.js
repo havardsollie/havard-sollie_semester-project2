@@ -25,11 +25,15 @@ export function displayDetails (product) {
   }
   
   container.innerHTML += `<div class="detailedData">
-    <h2>${product.title}</h2>
-    <p>${product.description}</p>
-    <p>${product.price}</p>
-    <img src="http://localhost:1337${product.image.url}" width="400px" height="300px" alt="${product.image.alternativeText}">
+    <div class="detailed-img">
+    <img src="http://localhost:1337${product.image.url}" width="100%" height="auto" alt="${product.image.alternativeText}">
+    </div>
+    <div class="inner-details">
+    <h3>${product.title}</h3>
     <i class="${cssClass} fa-heart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}"></i>
+    <h4>$${product.price}</h4>
+    </div>
+    <p>${product.description}</p>
     </div>`
 
     const iconToClick = document.querySelectorAll(".detailedData i");

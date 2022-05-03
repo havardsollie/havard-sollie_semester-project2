@@ -15,14 +15,17 @@ let total = 0;
 
 cart.forEach((product) => {
   total += parseFloat(product.price);
-  container.innerHTML += `<div class="item">
-                            <p>${product.title}</p>
-                            <p>${product.price}</p>
+  container.innerHTML += `<span class="item">
                             <img src="${product.image}" width="200px" height="150px">
+                            <div class="inner-item">
+                            <h3>${product.title}</h3>
+                            <h4>$${product.price},-</h4>
                             <a href="details.html?id=${product.id}">
                             <p>Go to page</p></a>
-                            </div>`
+                            </div>
+                            </span>
+                            <hr>`
                             
 });
 
-totalPrice.innerHTML = `Total: ${total}`;
+totalPrice.innerHTML = `<p>Total:</p><h4>$${total}</h4>`;
