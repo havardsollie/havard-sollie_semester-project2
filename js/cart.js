@@ -28,7 +28,6 @@ cart.forEach((product) => {
                             </div>
                             </span>
                             <hr>`
-                            
-});
+}); 
 
 totalPrice.innerHTML = `<p>Total:</p><h4>$${total}</h4>`;

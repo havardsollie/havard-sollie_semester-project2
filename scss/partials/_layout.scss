@@ -68,6 +68,7 @@ body {
 .allData {
   margin: 0 auto;
   padding: 20px;
+  background: #fff1f1;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
@@ -88,7 +89,7 @@ body {
   }
 
   p {
-    color: var(--secondary-red);
+    color: var(--main-dark-blue);
     font-size: 40px;
     margin-top: -50px;
     display: flex;
@@ -131,6 +132,7 @@ body {
 .detailedData {
   max-width: 100%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 
   img {
@@ -164,6 +166,7 @@ body {
       margin-top: -50px;
       font-size: 2rem;
       text-align: end;
+      color: var(--main-dark-blue);
     }
 
     i:hover {
@@ -172,28 +175,18 @@ body {
   }
 }
 
-// @media (min-width: 700px) {
-//   .featured {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-template-rows: 1fr;
-//     grid-column-gap: 10px;
-//     grid-row-gap: 0px;
-//   }
-// }
-
 @media (min-width: 700px) {
   .detailedData {
-    background-color: var(--secondary-red);
-    opacity: 0.9;
+    opacity: 1;
     background-image: radial-gradient(var(--main-light-blue) 1.2000000000000002px, #FFFFFF 1.2000000000000002px);
     background-size: 28px 28px;
   
   .inner-details {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    gap: 30px;
+    align-items:baseline;
+    margin-top: 50px;
+    gap: 50px;
 
     h3, h4, i {
       font-size: 4rem;
@@ -205,7 +198,8 @@ body {
 @media (min-width: 1000px) {
   .detailedData {
     display: flex;
-    max-width: 800px;
+    flex-direction: row;
+    max-width: 900px;
     margin: 0 auto;
 
     .detailed-img {

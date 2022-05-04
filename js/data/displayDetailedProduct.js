@@ -10,14 +10,14 @@ export function displayDetails (product) {
 
   container.innerHTML = "";
   
-  let cssClass = "far";
+  let cssClass = "fa fa-dolly";
 
   const cartItem = cart.find(function (fav) {
     return parseInt(fav.id) === product.id;
   })
 
   if (cartItem) {
-    cssClass = "fa";
+    cssClass = "fa fa-check";
   }
   
   container.innerHTML += `<div class="detailedData">
@@ -26,7 +26,7 @@ export function displayDetails (product) {
     </div>
     <div class="inner-details">
     <h3>${product.title}</h3>
-    <i class="${cssClass} fa-heart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}"></i>
+    <i class="${cssClass}" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-image="http://localhost:1337${product.image.url}"></i>
     <h4>$${product.price}</h4>
     </div>
     <p>${product.description}</p>
@@ -44,8 +44,8 @@ export function displayDetails (product) {
 }
 
 export function addToList() {
-  this.classList.toggle("fa");
-  this.classList.toggle("far");
+  this.classList.toggle("fa-dolly");
+  this.classList.toggle("fa-check");
 
   const id = this.dataset.id;
   const title = this.dataset["title"];
@@ -62,6 +62,7 @@ export function addToList() {
     const newItem = { id: id, title: title, price: price, image: image };
     cart.push(newItem);
     saveCart(cart);
+
   }
   else {
     const newCart = cart.filter((fav) => fav.id !== id);
