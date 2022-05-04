@@ -1,6 +1,7 @@
 
 import getCart from "../utils/getCart.js";
 import saveCart from "../utils/saveCart.js";
+import { mouseover, mouseout } from "../utils/mouseover.js";
 
 const container = document.querySelector(".product-container");
 
@@ -41,6 +42,8 @@ export function displayDetails (product) {
           saveCart();
         });
     });
+    mouseover();
+    mouseout();
 }
 
 export function addToList() {

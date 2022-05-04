@@ -1,4 +1,5 @@
 import { getUsername } from "./storage.js";
+import logOutBtn from "./logout.js";
 
 export default function menu() {
   const { path } = document.location;
@@ -10,6 +11,7 @@ export default function menu() {
     authorizationLink = `
                           <a href="productsforadmin.html" class="${path === "/productsforadmin.html" ? "active" : ""}">Edit Products</a>
                           <a href="add.html" class="${path === "/add.html" ? "active" : ""}">Add product</a>
+                          <i class="fa fa-dove" id="dove"></i>
                         `;
   }
 
@@ -21,9 +23,11 @@ export default function menu() {
                               <div class="menu-links">
                                 <a href="/" class="${path === "/index.html" ? "active" : ""}">Home</a>
                                 <a href="products.html" class="${path === "/products.html" ? "active" : ""}">Collection</a>
-                                <a href="cart.html" class="${path === "/cart.html" ? "active" : ""}">Cart</a>
+                                <a href="cart.html" id="cart" class="${path === "/cart.html" ? "active" : ""}">Cart</a>
                                 ${authorizationLink}
                               </div>
                           </div>
                           </nav>`;
+  
+  logOutBtn();
 }

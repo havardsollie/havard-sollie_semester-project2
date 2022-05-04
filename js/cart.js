@@ -9,7 +9,7 @@ const container = document.querySelector(".cart-container");
 
 if(cart.length === 0) {
   container.innerHTML = `<div class="error">
-                            <p>There are no favorites</p>
+                            <p>The cart is empty</p>
                           </div>`
 }
 

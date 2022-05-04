@@ -31,11 +31,6 @@ button {
   border: none;
 }
 
-button:hover {
-  width: 101%;
-  height: 31px;
-}
-
 .message.success {
   margin-top: 20px;
   font-size: 25px;
@@ -69,5 +64,11 @@ button:hover {
   
   button {
     background: var(--secondary-red);
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
 }
