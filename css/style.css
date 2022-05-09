@@ -544,4 +544,22 @@ button {
     opacity: 0;
   }
 }
+
+.message {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid grey;
+}
+
+.message.error {
+  border-color: orange;
+  color: white;
+  background: orange;
+}
+
+.message.success {
+  border-color: green;
+  color: white;
+  background: green;
+}
 /*# sourceMappingURL=style.css.map */
