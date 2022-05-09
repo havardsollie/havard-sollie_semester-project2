@@ -21,7 +21,7 @@ export default function menu() {
                           <div class="menu-items">
                               
                               <div class="menu-links">
-                                <a href="/" class="${path === "/index.html" ? "active" : ""}">Home</a>
+                                <a href="index.html" class="${path === "/index.html" ? "active" : ""}">Home</a>
                                 <a href="products.html" class="${path === "/products.html" ? "active" : ""}">Collection</a>
                                 <a href="cart.html" id="cart" class="${path === "/cart.html" ? "active" : ""}">Cart</a>
                                 ${authorizationLink}
