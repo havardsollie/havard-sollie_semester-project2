@@ -29,7 +29,7 @@ function submitForm(event) {
   const trueValue = checkFeatured();
 
   if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
-    return displayMessage("Please supply proper input", ".add-container");
+    return displayMessage("Please supply proper input", ".message-container");
   }
 
   addProduct(titleValue, priceValue, imageValue, trueValue);
@@ -44,7 +44,6 @@ async function addProduct(title, price, image, trueValue) {
 
   formData.append("files.image", image[0]);
   formData.append("data", data);
-  console.log("data", data, formData);
 
   const options = {
     method: "POST",
