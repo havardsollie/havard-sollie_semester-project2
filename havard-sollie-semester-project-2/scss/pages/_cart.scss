@@ -1,0 +1,48 @@
+.item {
+  display: flex;
+  padding: 50px;
+
+  img {
+    border-radius: 50px 50px 50px 50px;
+  }
+
+  .inner-item {
+    padding-left: 50px;
+  }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: #bebebe;
+  width: 30%;
+
+  p, h4 {
+    font-size: 25px;
+  }
+
+  p {
+    color: var(--secondary-red);
+  }
+
+  h4 {
+    color: var(--main-dark-blue);
+  }
+}
+
+@media (min-width: 700px) {
+  .item {
+    img {
+      width: 300px;
+      height: 200px;
+    }
+
+    .inner-item {
+      h3, h4, p {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

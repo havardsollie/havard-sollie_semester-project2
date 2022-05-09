@@ -1,17 +1,19 @@
-.message {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid grey;
-}
-
-.message.error {
-  border-color: orange;
-  color: white;
-  background: orange;
+.message-container {
+  width: 200px;
 }
 
 .message.success {
-  border-color: green;
-  color: white;
-  background: green;
+  margin-top: 20px;
+  font-size: 25px;
+  color: green;
+  border: 1px solid green;
+  padding: 10px;
+}
+
+.message.warning {
+  margin-top: 50px;
+  font-size: 25px;
+  color: red;
+  border: 1px solid red;
+  padding: 10px;
 }

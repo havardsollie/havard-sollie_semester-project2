@@ -29,7 +29,7 @@ function submitForm(event) {
   const trueValue = checkFeatured();
 
   if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
-    return displayMessage("Please supply proper input", ".message-container");
+    return displayMessage("warning", "Empty input field(s)", ".message-container");
   }
 
   addProduct(titleValue, priceValue, imageValue, trueValue);
