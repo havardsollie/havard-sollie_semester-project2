@@ -9,10 +9,10 @@ input {
 .search-container {
   max-width: 200px;
   padding: 50px;
-}
 
-.search::placeholder {
-  font-family: $font-p;
+  &::placeholder {
+    font-family: $font-p;
+  }
 }
 
 .login-form {

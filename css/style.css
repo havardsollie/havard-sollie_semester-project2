@@ -554,7 +554,7 @@ button {
     width: 300px;
     height: 200px;
   }
-  .item .inner-item h3, .item .inner-item h4, .item .inner-item p {
+  .item .inner-item {
     font-size: 1.5em;
   }
 }

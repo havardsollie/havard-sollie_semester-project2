@@ -1,19 +1,19 @@
 .message-container {
   width: 200px;
-}
 
-.message.success {
-  margin-top: 20px;
-  font-size: 25px;
-  color: green;
-  border: 1px solid green;
-  padding: 10px;
-}
+  .message.success {
+    margin-top: 20px;
+    font-size: 25px;
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+  }
 
-.message.warning {
-  margin-top: 50px;
-  font-size: 25px;
-  color: red;
-  border: 1px solid red;
-  padding: 10px;
+  .message.warning {
+    margin-top: 50px;
+    font-size: 25px;
+    color: red;
+    border: 1px solid red;
+    padding: 10px;
+  }
 }

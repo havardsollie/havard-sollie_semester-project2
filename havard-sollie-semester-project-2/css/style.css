@@ -36,7 +36,7 @@ header .nav-container {
 }
 
 .menu-items a:hover {
-  color: var(--main-light-blue);
+  color: var(--secondary-red);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -66,7 +66,7 @@ i {
   color: var(--main-dark-blue);
 }
 
-#dove:hover {
+#dove #dove:hover {
   cursor: pointer;
   font-size: 1.1em;
 }
@@ -89,6 +89,9 @@ i {
     right: 0px;
     width: auto;
     background: none;
+  }
+  header .menu-links a:hover {
+    color: var(--main-light-blue);
   }
   #dove {
     color: var(--main-light-blue);
@@ -113,6 +116,148 @@ i {
 body {
   height: 100%;
   text-decoration: none;
+}
+
+main {
+  text-decoration: none;
+}
+
+a {
+  font-family: "Bangers";
+}
+
+p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h2 {
+  font-size: 50px;
+  text-align: end;
+  padding-right: 10px;
+  font-family: "Faster One";
+  position: relative;
+}
+
+h3 {
+  font-family: "Geo", sans-serif;
+}
+
+h4 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h6 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 10px;
+  padding-left: 2px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--main-dark-blue);
+  height: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  max-width: 200px;
+  padding: 50px;
+}
+
+.search-container::-webkit-input-placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.search-container:-ms-input-placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.search-container::-ms-input-placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.search-container::placeholder {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.login-form {
+  max-width: 800px;
+  width: 400px;
+  margin: 0 auto;
+  color: black;
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  background: var(--main-dark-blue);
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.edit-container {
+  margin-top: 50px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.edit-container .check-featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.delete {
+  margin-top: 40px;
+}
+
+.delete button {
+  background: var(--secondary-red);
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.message-container {
+  width: 200px;
+}
+
+.message-container .message.success {
+  margin-top: 20px;
+  font-size: 25px;
+  color: green;
+  border: 1px solid green;
+  padding: 10px;
+}
+
+.message-container .message.warning {
+  margin-top: 50px;
+  font-size: 25px;
+  color: red;
+  border: 1px solid red;
+  padding: 10px;
 }
 
 .hero-banner {
@@ -407,153 +552,12 @@ body {
   color: var(--main-dark-blue);
 }
 
-main {
-  text-decoration: none;
-}
-
-a {
-  font-family: "Bangers";
-}
-
-p {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-h1 {
-  text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-h2 {
-  font-size: 50px;
-  text-align: end;
-  padding-right: 10px;
-  font-family: "Faster One";
-  position: relative;
-}
-
-h3 {
-  font-family: "Geo", sans-serif;
-}
-
-h4 {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-h6 {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 10px;
-  padding-left: 2px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid var(--main-dark-blue);
-  height: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.search-container {
-  max-width: 200px;
-  padding: 50px;
-}
-
-.search::-webkit-input-placeholder {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.search:-ms-input-placeholder {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.search::-ms-input-placeholder {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.search::placeholder {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.login-form {
-  max-width: 800px;
-  width: 400px;
-  margin: 0 auto;
-  color: black;
-}
-
-button {
-  width: 100%;
-  height: 30px;
-  background: var(--main-dark-blue);
-  color: white;
-  cursor: pointer;
-  border: none;
-}
-
-.message.success {
-  margin-top: 20px;
-  font-size: 25px;
-  color: green;
-  border: 1px solid green;
-  padding: 10px;
-}
-
-.message.warning {
-  margin-top: 50px;
-  font-size: 25px;
-  color: red;
-  border: 1px solid red;
-  padding: 10px;
-}
-
-.edit-container {
-  margin-top: 50px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.edit-container .check-featured {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.delete {
-  margin-top: 40px;
-}
-
-.delete button {
-  background: var(--secondary-red);
-}
-
-@-webkit-keyframes blinker {
-  50% {
-    opacity: 0;
+@media (min-width: 700px) {
+  .item img {
+    width: 300px;
+    height: 200px;
+  }
+  .item .inner-item {
+    font-size: 1.5em;
   }
 }
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-
-.message.error {
-  border-color: orange;
-  color: white;
-  background: orange;
-}
-
-.message.success {
-  border-color: green;
-  color: white;
-  background: green;
-}
-/*# sourceMappingURL=style.css.map */

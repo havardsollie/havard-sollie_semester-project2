@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: $pad-dimensions) {
   .item {
     img {
       width: 300px;
@@ -40,9 +40,7 @@
     }
 
     .inner-item {
-      h3, h4, p {
-        font-size: 1.5em;
-      }
+      font-size: 1.5em;
     }
   }
 }

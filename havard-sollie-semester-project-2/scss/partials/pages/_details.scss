@@ -44,7 +44,7 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: $pad-dimensions) {
   .detailedData {
     opacity: 1;
     background-image: radial-gradient(var(--main-light-blue) 1.2000000000000002px, #FFFFFF 1.2000000000000002px);
@@ -64,7 +64,7 @@
 }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: $laptop-dimensions) {
   .detailedData {
     display: flex;
     flex-direction: row;
