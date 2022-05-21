@@ -16,7 +16,7 @@ async function showFeatured() {
     displayFeatured(data);
 
   } catch (error) {
-    displayMessage("warning", "Error. I dont know", ".message-container")
+    displayMessage("warning", "Error. Not recieving data", ".message-container")
     console.log(error);
   }  
 }

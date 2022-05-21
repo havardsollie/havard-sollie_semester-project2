@@ -18,7 +18,7 @@ async function showAll() {
     searchInData(data);
 
   } catch (error) {
-    displayMessage("warning", "Cant find something", ".message-container")
+    displayMessage("warning", "Error. Not recieving data", ".message-container")
     console.log(error);
   }  
 }
