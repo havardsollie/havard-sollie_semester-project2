@@ -4,6 +4,7 @@ import logOutBtn from "./logout.js";
 export default function menu() {
   const { path } = document.location;
   const container = document.querySelector(".menu-container");
+  const footer = document.querySelector("footer");
   const username = getUsername();
   let authorizationLink = `<a href="admin.html" class="${path === "/admin.html" ? "active" : ""}">Login</a>`;
 
@@ -28,6 +29,8 @@ export default function menu() {
                               </div>
                           </div>
                           </nav>`;
+  
+  footer.innerHTML = `<img src="sneakylogo.png" width="auto" height="50px">`;                        
   
   logOutBtn();
 }

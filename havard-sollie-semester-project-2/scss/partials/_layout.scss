@@ -11,5 +11,11 @@ body {
   margin-bottom: 20px;
 }
 
+footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 $pad-dimensions: 700px;
 $laptop-dimensions: 1000px;
