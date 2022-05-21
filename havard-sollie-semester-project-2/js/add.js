@@ -11,6 +11,7 @@ menu();
 const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
+const desc = document.querySelector("#desc");
 const message = document.querySelector(".message-container");
 
 const image = document.getElementById("image");
@@ -25,22 +26,23 @@ function submitForm(event) {
 
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
+  const descValue = desc.value.trim();
   const imageValue = image.files;
   const trueValue = checkFeatured();
 
-  if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
+  if (titleValue.length === 0 || priceValue.length === 0 || descValue.length === 0 || isNaN(priceValue) || imageValue.length === 0) {
     return displayMessage("warning", "Empty input field(s)", ".message-container");
   }
 
-  addProduct(titleValue, priceValue, imageValue, trueValue);
+  addProduct(titleValue, priceValue, descValue, imageValue, trueValue);
 }
 
-async function addProduct(title, price, image, trueValue) {
+async function addProduct(title, price, description, image, trueValue) {
   const token = fetchToken();
 
   const formData = new FormData();
 
-  const data = JSON.stringify({ title, price, featured: trueValue });
+  const data = JSON.stringify({ title, price, description, featured: trueValue });
 
   formData.append("files.image", image[0]);
   formData.append("data", data);

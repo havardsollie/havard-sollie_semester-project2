@@ -22,6 +22,7 @@ const productUrl = url + id;
 const form = document.querySelector("form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
+const desc = document.querySelector("#desc");
 const image = document.querySelector("#image");
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
@@ -33,6 +34,7 @@ const message = document.querySelector(".message-container");
 
     title.value = details.title;
     price.value = details.price;
+    desc.value = details.description;
     idInput.value = details.id;
 
     deleteProduct(details.id);
@@ -51,22 +53,23 @@ function submitForm(event) {
 
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
+  const descValue = desc.value.trim();
   const imageValue = image.files;
   const featuredValue = checkFeatured();
 
-  if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) ) {
+  if (titleValue.length === 0 || priceValue.length === 0 || descValue.length === 0 || isNaN(priceValue) ) {
     return displayMessage("warning", "Please supply proper input", ".message-container");
   }
 
-  updateProduct(titleValue, priceValue, imageValue, featuredValue);
+  updateProduct(titleValue, priceValue, descValue, imageValue, featuredValue);
   console.log(submitForm)
 }
 
-async function updateProduct(title, price, image, featuredValue) {
+async function updateProduct(title, price, description, image, featuredValue) {
   const token = fetchToken();
   const formData = new FormData();
 
-  const data = JSON.stringify({ title, price, featured: featuredValue });
+  const data = JSON.stringify({ title, price, description, featured: featuredValue });
 
   formData.append("files.image", image[0]);
   formData.append("data", data);

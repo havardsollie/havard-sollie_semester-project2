@@ -12,46 +12,49 @@
         <link rel="icon" href="data:;base64,=" />
     </head>
     <body>
-      <header>
-        <div>
-          <a href="index.html"><img src="sneakylogo.png" width="auto" height="70px"></a>
-        </div>
-        <div class="menu-container"></div>
-      </header>
+        <header>
+          <div>
+            <a href="index.html"><img src="sneakylogo.png" width="auto" height="70px"></a>
+          </div>
+          <div class="menu-container"></div>
+        </header>
     <main>
-      <div class="header">
-        <h2>Add</h2>
-      </div>
+        <div class="header">
+          <h2>Add</h2>
+        </div>
 
-      <div class="edit-container">
-      <form>
-
-        <div>
-          <label for="title">Title</label>
-          <input id="title" />
+        <div class="edit-container">
+        <form>
+          <div>
+            <label for="title">Title</label>
+            <input id="title" />
+          </div>
+          <div>
+            <label for="price">Price</label>
+            <input id="price" />
+          </div>
+          <div>
+            <label for="desc">Description</label>
+            <input id="desc" />
+          </div>
+          <div>
+            <label for="image">Image Upload</label>
+            <input type="file" input id="image" accept="image/*" />
+          </div>
+          <hr>
+          <div class="check-featured">
+            <label for="featured">Featured product?</label>
+            <input type="checkbox" id="yes" value="yes" onclick="false">Yes</input>
+            <input type="checkbox" id="no" value="no" onclick="false">No</input>
+          </div>
+          <hr>
+          <button>Add product</button>
+        </form>
+        <div class="message-container"></div>
         </div>
-        <div>
-          <label for="price">Price</label>
-          <input id="price" />
-        </div>
-        <div>
-          <label for="image">Image Upload</label>
-          <input type="file" input id="image" accept="image/*" />
-        </div>
-        <hr>
-        <div class="check-featured">
-          <label for="featured">Featured product?</label>
-          <input type="checkbox" id="yes" value="yes" onclick="false">Yes</input>
-          <input type="checkbox" id="no" value="no" onclick="false">No</input>
-        </div>
-        <hr>
-        <button>Add product</button>
-      </form>
-      <div class="message-container"></div>
-      </div>
-           
-     </main>
-     <footer></footer> 
-        <script src="js/add.js" type="module"></script>
+            
+    </main>
+    <footer></footer> 
+      <script src="js/add.js" type="module"></script>
     </body>
 </html>

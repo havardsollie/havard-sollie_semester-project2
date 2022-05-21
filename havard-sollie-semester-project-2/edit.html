@@ -12,54 +12,53 @@
         <link rel="icon" href="data:;base64,=" />
     </head>
     <body>
-      <header>
-        <div class="logo">
-          <a href="index.html"><img src="sneakylogo.png" width="auto" height="70px"></a>
-        </div>
-
-        <div class="menu-container"></div>
-      </header>
-     <main>
-      <div class="header">
-        <h2>Edit</h2>
-      </div>
-
-      <div class="edit-container">
-      <form>
-
-        <div>
-          <label for="title">Title</label>
-          <input id="title" />
-        </div>
-        <div>
-          <label for="price">Price</label>
-          <input id="price" />
-        </div>
-        <div>
-          <div>
-            <label for="image">Image Upload</label>
-            <input type="file" input id="image" accept="image/*" />
+        <header>
+          <div class="logo">
+            <a href="index.html"><img src="sneakylogo.png" width="auto" height="70px"></a>
           </div>
+          <div class="menu-container"></div>
+        </header>
+    <main>
+        <div class="header">
+          <h2>Edit</h2>
         </div>
-        <hr>
-        <div class="check-featured">
-          <label for="featured">Featured product?</label>
-          <input type="checkbox" id="yes" value="yes" onclick="false">Yes</input>
-          <input type="checkbox" id="no" value="no" onclick="false">No</input>
-        </div>
-        <hr>
 
-        <input id="id" type="hidden" />
-
-        <button id="update">Update product</button>
-        <div class="message-container"></div>
-
-        <div class="delete"></div>
-        
-      </form>
-    </div>
-           
-     </main>
+        <div class="edit-container">
+        <form>
+          <div>
+            <label for="title">Title</label>
+            <input id="title" />
+          </div>
+          <div>
+            <label for="price">Price</label>
+            <input id="price" />
+          </div>
+          <div>
+            <label for="desc">Description</label>
+            <input id="desc" />
+          </div>
+          <div>
+            <div>
+              <label for="image">Image Upload</label>
+              <input type="file" input id="image" accept="image/*" />
+            </div>
+          </div>
+          <hr>
+          <div class="check-featured">
+            <label for="featured">Featured product?</label>
+            <input type="checkbox" id="yes" value="yes" onclick="false">Yes</input>
+            <input type="checkbox" id="no" value="no" onclick="false">No</input>
+          </div>
+          <hr>
+          <input id="id" type="hidden" />
+          <button id="update">Update product</button>
+          
+          <div class="message-container"></div>
+          <div class="delete"></div>
+          
+        </form>
+        </div>     
+    </main>
      <footer></footer> 
         <script src="js/edit.js" type="module"></script>
     </body>
