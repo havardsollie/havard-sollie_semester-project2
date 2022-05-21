@@ -1,6 +1,12 @@
 body {
-  height: 100%;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .header {
@@ -12,9 +18,21 @@ body {
 }
 
 footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  background-image:  linear-gradient(135deg, #16EAEA 25%, transparent 25%), linear-gradient(225deg, #16EAEA 25%, transparent 25%), linear-gradient(45deg, #16EAEA 25%, transparent 25%), linear-gradient(315deg, #16EAEA 25%, #e5e5f7 25%);
+  background-position:  4px 0, 4px 0, 0 0, 0 0;
+  background-size: 8px 8px;
+  background-repeat: repeat;
+
+  & img {
+    background: white;
+    padding: 20px;
+  }
 }
 
 $pad-dimensions: 700px;
