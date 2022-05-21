@@ -1,5 +1,5 @@
 import { displayAllAdmin } from "./data/displayAllAdmin.js";
-import { api } from "./utils/api.js";
+import { api } from "./settings/api.js";
 import { displayMessage } from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
 

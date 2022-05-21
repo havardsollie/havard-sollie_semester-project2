@@ -1,7 +1,8 @@
 $font-nav: "Bangers";
-$font-headers: 'Faster One';
+$font-headers: 'Arvo', serif;;
 $font-second-header: 'Geo', sans-serif;
 $font-p: 'Source Sans Pro', sans-serif;
+$font-fast: 'Faster One';
 
 main {
   text-decoration: none;
@@ -21,11 +22,11 @@ h1 {
 }
 
 h2 {
-  font-size: 50px;
-  text-align: end;
+  font-size: 30px;
+  text-align: center;
   padding-right: 10px;
-  font-family: $font-headers;
-  position: relative;
+  font-family: $font-fast;
+  color: var(--secondary-red);
 }
 
 h3 {
@@ -40,4 +41,10 @@ h6 {
   font-family: $font-p;
   font-size: 10px;
   padding-left: 2px;
+}
+
+@media (min-width: 700px) {
+  h2 {
+    font-size: 50px;
+  }
 }

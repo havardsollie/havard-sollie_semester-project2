@@ -1,4 +1,4 @@
-import { userKey, tokenKey } from "./storage.js";
+import { userKey, tokenKey } from "../settings/storage.js";
 
 export default function logOutBtn() {
   const button = document.querySelector("#dove");

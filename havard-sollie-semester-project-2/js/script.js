@@ -1,7 +1,6 @@
-
 import { displayFeatured } from "./data/displayFeatured.js";
 import menu from "./utils/createMenu.js";
-import { api } from "./utils/api.js";
+import { api } from "./settings/api.js";
 import { displayMessage } from "./utils/displayMessage.js";
 
 const url = api + "products/";

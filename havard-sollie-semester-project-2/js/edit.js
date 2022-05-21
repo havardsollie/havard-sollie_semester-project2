@@ -1,8 +1,7 @@
-
-import { api } from "./utils/api.js";
+import { api } from "./settings/api.js";
 import { displayMessage } from "./utils/displayMessage.js";
 import menu from "./utils/createMenu.js";
-import { fetchToken } from "./utils/storage.js";
+import { fetchToken } from "./settings/storage.js";
 import checkFeatured from "./utils/featuredCheck.js";
 import deleteProduct from "./utils/deleteProduct.js";
 

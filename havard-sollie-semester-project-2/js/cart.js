@@ -1,4 +1,4 @@
-import getCart from "./utils/getCart.js";
+import getCart from "./settings/getCart.js";
 import menu from "./utils/createMenu.js";
 
 menu();

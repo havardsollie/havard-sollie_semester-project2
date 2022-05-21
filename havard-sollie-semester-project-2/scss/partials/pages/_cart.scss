@@ -33,6 +33,18 @@
 }
 
 @media (min-width: $pad-dimensions) {
+
+  .cart-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .total {
+    max-width: 900px;
+    margin: auto;
+    height: 50px;
+  }
+
   .item {
     img {
       width: 300px;

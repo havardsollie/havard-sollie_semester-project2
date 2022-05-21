@@ -1,8 +1,7 @@
 import { displayDetails } from "./data/displayDetailedProduct.js";
 import { addToList } from "./data/displayDetailedProduct.js";
-import { api } from "./utils/api.js";
+import { api } from "./settings/api.js";
 import menu from "./utils/createMenu.js";
-// import { displayMessage } from "./utils/displayMessage.js";
 
 menu();
 

@@ -1,5 +1,5 @@
 import { displayMessage } from "./utils/displayMessage.js";
-import { saveTokenKey, saveThisUser } from "./utils/storage.js";
+import { saveTokenKey, saveThisUser } from "./settings/storage.js";
 import menu from "./utils/createMenu.js";
 
 const form = document.querySelector("form");

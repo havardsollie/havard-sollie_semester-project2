@@ -1,8 +1,3 @@
-
-
-
-
-
 export function mouseover() {
 
   const dolly = document.querySelector(".fa.fa-dolly");

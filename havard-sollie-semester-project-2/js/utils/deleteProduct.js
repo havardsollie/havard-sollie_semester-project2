@@ -1,5 +1,5 @@
-import { fetchToken } from "./storage.js";
-import { api } from "./api.js";
+import { fetchToken } from "../settings/storage.js";
+import { api } from "../settings/api.js";
 
 const url = api + "products/"
 

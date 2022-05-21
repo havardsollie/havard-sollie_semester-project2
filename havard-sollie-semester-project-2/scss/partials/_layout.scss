@@ -3,5 +3,13 @@ body {
   text-decoration: none;
 }
 
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
 $pad-dimensions: 700px;
 $laptop-dimensions: 1000px;

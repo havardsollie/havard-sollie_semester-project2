@@ -1,4 +1,4 @@
-import { getUsername } from "./storage.js";
+import { getUsername } from "../settings/storage.js";
 import logOutBtn from "./logout.js";
 
 export default function menu() {

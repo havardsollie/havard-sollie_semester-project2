@@ -1,5 +1,3 @@
-
-
 const checkbox = document.querySelector("#yes");
 const noBox = document.querySelector("#no");
   

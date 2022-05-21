@@ -1,6 +1,6 @@
 
-import getCart from "../utils/getCart.js";
-import saveCart from "../utils/saveCart.js";
+import getCart from "../settings/getCart.js";
+import saveCart from "../settings/saveCart.js";
 import { mouseover, mouseout } from "../utils/mouseover.js";
 
 const container = document.querySelector(".product-container");
