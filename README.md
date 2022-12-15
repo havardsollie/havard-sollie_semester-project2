@@ -21,7 +21,7 @@ This project is a combination of vanilla JS, without a framework, plain HTML and
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+Note that this is just the frontend files of the project. You need to run the strapi files from a different project folder.
 
 1. Clone the repo:
 
@@ -41,14 +41,22 @@ npm install
 
 To run the app, run the following commands:
 
+In the strapi folder:
 ```bash
 npm run develop
 ```
 
-This will open the localhost:1337 port, where it will tell you to log in to the Strapi admin pages.
+This will open the localhost:1337 port, where it will tell you to log in to the Strapi admin pages (this is not necessary).
 
 Login credentails:
 email: admin@admin.com
+password: Pass1234
+
+In this folder (the frontend files):
+Right-click index.html -> Open with Live Server [CommandL CommandO].
+
+Login credentials for the frontend admin pages:
+username: admin
 password: Pass1234
 
 ## Contact
